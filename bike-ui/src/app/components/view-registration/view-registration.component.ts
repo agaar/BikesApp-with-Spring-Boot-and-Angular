@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BikeService } from '../../services/bike.service';
-import { ActivatedRoute } from '@angular/router';  //helps to take bike by id
+import { ActivatedRoute } from '@angular/router';  
 
 @Component({
   selector: 'app-view-registration',
@@ -11,7 +11,7 @@ export class ViewRegistrationComponent implements OnInit {
 
   public bikeReg: any;
 
-  constructor(private bikeService: BikeService, private route: ActivatedRoute) { }  //bike service injected into constructor
+  constructor(private bikeService: BikeService, private route: ActivatedRoute) { } 
 
   ngOnInit(): void {
     this.getBikeReg(this.route.snapshot.params.id);
@@ -24,7 +24,7 @@ export class ViewRegistrationComponent implements OnInit {
       },
       err => console.error(err),
       () => console.log('bikes loaded')
-    );
+    )
   }
 
 }
