@@ -10,7 +10,7 @@ const routes: Routes = [
 		component: HomeComponent
 	},
 	{
-		path: 'view-registration',
+		path: 'admin/view/:id',
 		component: ViewRegistrationComponent
 	},
 	{
