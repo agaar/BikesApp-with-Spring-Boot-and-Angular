@@ -1,5 +1,4 @@
-CREATE TABLE
-    bike
+CREATE TABLE bike
     (
         id BIGINT NOT NULL,
         contact BOOLEAN NOT NULL,
@@ -13,10 +12,9 @@ CREATE TABLE
         PRIMARY KEY (id)
     );
 
-CREATE TABLE
-    hibernate_sequence
+CREATE TABLE hibernate_sequence
     (
-        next_val BIGINT
+        id SERIAL
     );
 
 INSERT INTO bike (id, contact, email, model, name, phone, purchase_date, purchase_price)
@@ -26,4 +24,4 @@ INSERT INTO bike (id, contact, email, model, name, phone, purchase_date, purchas
 INSERT INTO bike (id, contact, email, model, name, phone, purchase_date, purchase_price)
   VALUES (3, 1::boolean, 'dave@bikes.com', 'Globo Time Trial Blade', 'Dave Warren', '563-891-5555', TO_TIMESTAMP(4419619200000), '2100');
 
-INSERT INTO hibernate_sequence (next_val) VALUES (4);
+INSERT INTO hibernate_sequence (id) VALUES (4);

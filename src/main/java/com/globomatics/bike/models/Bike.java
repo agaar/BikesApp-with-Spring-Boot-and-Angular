@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -16,7 +17,8 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class Bike {
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="sequence-generator")
+	@SequenceGenerator(name="sequence-generator", sequenceName="hibernate_sequence_id_seq", allocationSize = 1)
 	private Long id;
 	
 	private String name;
