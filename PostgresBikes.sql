@@ -1,6 +1,11 @@
+CREATE TABLE hibernate_sequence
+    (
+        id SERIAL PRIMARY KEY
+    );
+	
 CREATE TABLE bike
     (
-        id BIGINT NOT NULL,
+        id BIGINT DEFAULT nextval('hibernate_sequence_id_seq'),
         contact BOOLEAN NOT NULL,
         email VARCHAR,
         model VARCHAR,
@@ -12,10 +17,7 @@ CREATE TABLE bike
         PRIMARY KEY (id)
     );
 
-CREATE TABLE hibernate_sequence
-    (
-        id SERIAL
-    );
+
 
 INSERT INTO bike (id, contact, email, model, name, phone, purchase_date, purchase_price)
  VALUES (1, 1::boolean, 'jeff@bikes.com', 'Globo MTB 29 Full Suspension', 'Jeff Miller', '328-443-5555', TO_TIMESTAMP(441961920000) , '1100');
