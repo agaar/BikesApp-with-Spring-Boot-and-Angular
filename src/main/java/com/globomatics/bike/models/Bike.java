@@ -17,7 +17,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class Bike {
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO, generator="sequence-generator")
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="sequence-generator")
 	@SequenceGenerator(name="sequence-generator", sequenceName="hibernate_sequence_id_seq", allocationSize = 1)
 	private Long id;
 	
