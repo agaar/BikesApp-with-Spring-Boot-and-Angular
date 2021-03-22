@@ -1,0 +1,21 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="BikeApplication-heroku" type="Application" factoryName="Application">
+    <envs>
+      <env name="HEROKU_POSTGRES_DB_NAME" value="d1s5spfjj4c3vk" />
+      <env name="HEROKU_POSTGRES_DB_USER" value="uyduuogwelzxwh" />
+      <env name="HEROKU_POSTGRES_DB_PASSWORD" value="3ffddb73c4012b1a668bc76c7b88a3179283ad7909d35c38ee7c53954070be33" />
+    </envs>
+    <option name="MAIN_CLASS_NAME" value="com.globomatics.bike.BikeApplication" />
+    <module name="bike" />
+    <option name="VM_PARAMETERS" value="-Dspring.profiles.active=heroku" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="com.globomatics.bike.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
